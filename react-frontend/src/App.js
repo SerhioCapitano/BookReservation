@@ -10,7 +10,6 @@ import './App.css';
 import {BrowserRouter as Router, Route,  Routes, Navigate } from 'react-router-dom';
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
-import ListEmployeeComponent from './components/ListEmployeeComponent';
 import AddBookComponent from './components/AddBookComponent';
 import Table_Books from './components/TableBooks';
 import ErrorPage from './components/ErrorPage';
@@ -24,6 +23,15 @@ const AuthRoute = ({ children }) => {
   }
   return children;
 };
+
+
+const AuthAdminRoute = ({children }) => {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if(user.username !== "admin") {
+    return <Navigate to="/books" replace/>
+  }
+  return children;
+} 
 
 
 
@@ -44,7 +52,7 @@ function App() {
           <Route exact path="/login" element={<Login/>} />
           <Route exact path="/register" element={<Register/>} />
           <Route exact path="/profile" element={<AuthRoute><Profile/></AuthRoute>} />
-          <Route path = "/category" element={<AuthRoute><CategoryTable/></AuthRoute>} />
+          <Route path = "/category" element={<AuthRoute><AuthAdminRoute><CategoryTable/></AuthAdminRoute></AuthRoute>} />
           <Route path="/user" element={<AuthRoute><BoardUser/></AuthRoute>} />
             <Route path="/admin" element={<AuthRoute><BoardAdmin/></AuthRoute>} />
         </Routes>

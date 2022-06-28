@@ -25,6 +25,7 @@ const HeaderComponent = () => {
   const logOut = () => {
     AuthService.logout();
   };
+
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
