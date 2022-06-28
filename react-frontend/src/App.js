@@ -11,8 +11,11 @@ import {BrowserRouter as Router, Route,  Routes, Navigate } from 'react-router-d
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
-import AddEmployeeComponent from './components/AddEmployeeComponent';
+import AddBookComponent from './components/AddBookComponent';
+import Table_Books from './components/TableBooks';
 import ErrorPage from './components/ErrorPage';
+import CategoryTable from "./components/CategoryTable";
+import AddCategoryComponent from "./components/AddCategoryComponent";
 
 const AuthRoute = ({ children }) => {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -32,13 +35,16 @@ function App() {
       <div className='container'>
         <Routes>
           <Route exact  path='/' element = {<Login/>}> </Route>
-          <Route path='/employees' element = {<AuthRoute><ListEmployeeComponent/></AuthRoute>}> </Route>
-          <Route path = '/add-employee' element = {<AuthRoute><AddEmployeeComponent/></AuthRoute>}> </Route>
-          <Route path = "/edit-employee/:id" element = {<AuthRoute><AddEmployeeComponent/></AuthRoute>}></Route>
+          <Route path='/books' element = {<AuthRoute><Table_Books/></AuthRoute>}> </Route>
+          <Route path = '/add-book' element = {<AuthRoute><AddBookComponent/></AuthRoute>}> </Route>
+          <Route path = "/edit-book/:id" element = {<AuthRoute><AddBookComponent/></AuthRoute>}></Route>
+          <Route path = '/add-category' element = {<AuthRoute><AddCategoryComponent/></AuthRoute>}> </Route>
+          <Route path = "/edit-category/:id" element = {<AuthRoute><AddCategoryComponent/></AuthRoute>}></Route>
           <Route path ="*" element= {<ErrorPage/>} > </Route>
           <Route exact path="/login" element={<Login/>} />
           <Route exact path="/register" element={<Register/>} />
           <Route exact path="/profile" element={<AuthRoute><Profile/></AuthRoute>} />
+          <Route path = "/category" element={<AuthRoute><CategoryTable/></AuthRoute>} />
           <Route path="/user" element={<AuthRoute><BoardUser/></AuthRoute>} />
             <Route path="/admin" element={<AuthRoute><BoardAdmin/></AuthRoute>} />
         </Routes>

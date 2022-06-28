@@ -37,7 +37,7 @@ const Login = () => {
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.login(username, password).then(
         () => {
-          navigate("/employees");
+          navigate("/books");
           window.location.reload();
         },
         (error) => {
