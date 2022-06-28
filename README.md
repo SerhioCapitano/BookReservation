@@ -1,5 +1,6 @@
 react-frontend aplanka atidaryt su Visual studio Code, terminale parasyt npm i, veliau npm start
 backenda atidaryt su Eclipse,Intellij, paleist SpringBootBackEndApplication kaip spring boot App
+instaliuoti h2 duombaze
  uzeiti i http://localhost:3000/
 Admino duomenys: 
 Username: admin	
