@@ -9,5 +9,5 @@ Vartotojo duomenys:
 Username: serhio
 Password: 123456
 
-neuzteko laiko padaryt rezervacija knygu, ir dar kazka,
+neuzteko laiko padaryt rezervacija knygu, knygu paieska,
 savo darba vertinu 6-7 balais. 
