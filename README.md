@@ -9,5 +9,13 @@ Vartotojo duomenys:
 Username: serhio
 Password: 123456
 
-neuzteko laiko padaryt rezervacija knygu, ir dar kazka,
+/////////////////////
+
+P A S T A B A
+
+
+tik su Adminu galima prisijungti prie Categorijos lenteles
+///////////////////////
+
+neuzteko laiko padaryt rezervacija knygu, knygu paieska,
 savo darba vertinu 6-7 balais. 
