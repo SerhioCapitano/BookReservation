@@ -12,11 +12,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import net.javaguides.springboot.model.Book;
 import net.javaguides.springboot.model.Category;
 import net.javaguides.springboot.model.ERole;
-import net.javaguides.springboot.model.Employee;
 import net.javaguides.springboot.model.Role;
 import net.javaguides.springboot.model.User;
 import net.javaguides.springboot.repository.BookRepository;
-import net.javaguides.springboot.repository.EmployeeRepository;
 import net.javaguides.springboot.repository.RoleRepository;
 import net.javaguides.springboot.repository.UserRepository;
 
@@ -27,8 +25,6 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 		SpringApplication.run(SpringbootBackendApplication.class, args);
 	}
 
-	@Autowired
-	private EmployeeRepository employeeRepository;
 	
 	@Autowired
 	private BookRepository bookRepository;
